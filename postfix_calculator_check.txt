@@ -1,0 +1,19 @@
+1.check whether postfix expression is valid 
+
+A postfix expression is valid if and only if:
+
+1) The first two elements are operands(values), and
+
+2) The last element is an operator, and
+
+3) For every n values there are n-1 operator(s), and
+
+4) In a list of n elements, starting at index i = 0 for i < n-1 (the second to last element), every group of elements consisting of k values( for k > 1 ) is followed by (k-1) operators. When k = 1, the number of operators that follows = k = 1.
+
+
+Initialize the counter to 0.
+When you see a literal, increment the counter.
+When you see a binary operator, decrement the counter twice, then increment it.
+When you see a unary operator, decrement the counter, then increment it.
+At the end of the string, if the counter is 1, and if it never went below 0, the string is valid.
+
